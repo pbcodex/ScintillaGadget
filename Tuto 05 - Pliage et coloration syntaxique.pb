@@ -76,7 +76,7 @@ EndProcedure
 ;-
 ;- U.T. Fenetres, Menu, Gadgets
 Procedure MainFormShow()  
-  OpenWindow(#MainForm,  0,  0, 1024, 768, "ScintillaGadget : Autocompletion", WindowStyle)
+  OpenWindow(#MainForm,  0,  0, 1024, 768, "ScintillaGadget : Pliage et coloration syntaxique", WindowStyle)
   
   ;Barre de status
   If CreateStatusBar(#StatusBar,WindowID(#Mainform))
@@ -417,3 +417,4 @@ Procedure Highlight(Gadget.l, EndPos.l)
     currentpos+1
   Wend 
 EndProcedure
+
