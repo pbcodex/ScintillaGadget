@@ -1,4 +1,4 @@
-﻿;Activer la touche TAB et neutraliser les caracteres speciaux
+;Activer la touche TAB et neutraliser les caracteres speciaux
 
 EnableExplicit
 
@@ -61,11 +61,11 @@ Procedure MainFormShow()
   MenuTitle("Fichier")
   MenuItem(#Quit,"Quitter")
   
-  If InitScintilla()
+  ;If InitScintilla()
     ;@ScintillaCallBack() est une procédure callback qui recevra  les évènements émis par ScintillaGadget 
     ScintillaGadget(#Editor, 10, 40, 1004, 668, @ScintillaCallBack())   
     SetActiveGadget(#Editor)
-  EndIf
+  ;EndIf
   
   ;-Préliminaires 
   
@@ -102,8 +102,3 @@ EndProcedure
 Procedure ScintillaCallBack(Gadget, *scinotify.SCNotification)
   ;Pour le moment rien mais ça va venir :)
 EndProcedure
-; IDE Options = PureBasic 5.42 LTS (Windows - x86)
-; FirstLine = 48
-; Folding = -
-; EnableUnicode
-; EnableXP
