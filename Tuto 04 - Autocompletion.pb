@@ -1,4 +1,4 @@
-﻿;Autocompletion
+;Autocompletion
 
 EnableExplicit
 
@@ -71,12 +71,12 @@ Procedure MainFormShow()
   MenuTitle("Fichier")
   MenuItem(#Quit,"Quitter")
   
-  If InitScintilla()
+  ;If InitScintilla()
     ;@ScintillaCallBack() correspond à l'adresse de la procédure qui recevra les évènements émis par le contrôle.
     ScintillaGadget(#Editor, 10, 40, 1004, 668, @ScintillaCallBack())
     ScintillaProperties(#Editor) ;Customisation de l'éditeur
     SetActiveGadget(#Editor)
-  EndIf
+  ;EndIf
    
   ;Neutraliser la touche TAB et les caractéres spéciaux
   RemoveKeyboardShortcut(#Mainform, #PB_Shortcut_Tab)
@@ -209,9 +209,3 @@ Procedure ScintillaProperties(Gadget)
   ;Tri de la liste d'autocomplétion
   ScintillaSendMessage(Gadget, #SCI_AUTOCSETORDER, #SC_ORDER_PERFORMSORT) 
 EndProcedure
-; IDE Options = PureBasic 5.42 LTS (Windows - x86)
-; CursorPosition = 181
-; FirstLine = 162
-; Folding = --
-; EnableUnicode
-; EnableXP
