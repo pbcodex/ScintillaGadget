@@ -1,4 +1,4 @@
-﻿;Customisation minimum
+;Customisation minimum
 
 EnableExplicit
 
@@ -66,12 +66,12 @@ Procedure MainFormShow()
   MenuTitle("Fichier")
   MenuItem(#Quit,"Quitter")
   
-  If InitScintilla()
+  ;If InitScintilla()
     ;@ScintillaCallBack() est une procédure callback qui recevra  les évènements émis par ScintillaGadget
     ScintillaGadget(#Editor, 10, 40, 1004, 668, @ScintillaCallBack())
     ScintillaProperties(#Editor) ;Customisation de l'éditeur
     SetActiveGadget(#Editor)
-  EndIf
+  ;EndIf
     
   ;Neutraliser la touche TAB et les caractéres spéciaux
   RemoveKeyboardShortcut(#Mainform, #PB_Shortcut_Tab)
@@ -172,9 +172,3 @@ Procedure ScintillaProperties(Gadget)
   ScintillaSendMessage(Gadget, #SCI_STYLESETBACK, #STYLE_LINENUMBER, RGB(169, 169, 169))
   ScintillaSendMessage(Gadget, #SCI_STYLESETFORE, #STYLE_LINENUMBER, RGB(250, 250, 210))
 EndProcedure
-; IDE Options = PureBasic 5.42 LTS (Windows - x86)
-; CursorPosition = 154
-; FirstLine = 125
-; Folding = --
-; EnableUnicode
-; EnableXP
